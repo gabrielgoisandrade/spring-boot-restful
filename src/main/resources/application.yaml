@@ -2,8 +2,8 @@ server:
   servlet:
     context-path: /api
 
-# Database config
 spring:
+  # Database config
   datasource:
     url: jdbc:h2:mem:restful
     driver-class-name: org.h2.Driver
@@ -37,3 +37,4 @@ security:
 springdoc:
   swagger-ui:
     path: /
+
