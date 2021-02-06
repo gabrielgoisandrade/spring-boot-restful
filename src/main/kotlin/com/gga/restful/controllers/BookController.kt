@@ -6,6 +6,12 @@ import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.responses.ApiResponse
 import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.data.domain.Page
+import org.springframework.data.domain.PageRequest
+import org.springframework.data.domain.Pageable
+import org.springframework.data.domain.Sort
+import org.springframework.data.web.PagedResourcesAssembler
+import org.springframework.hateoas.CollectionModel
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn
 import org.springframework.http.HttpStatus.CREATED
@@ -23,19 +29,28 @@ class BookController {
     private lateinit var service: BookService
 
     @Operation(
-        description = "Get all recorded books",
+        description = "Get all recorded books with an optional pagination",
         responses = [
             ApiResponse(description = "OK", responseCode = "200"),
             ApiResponse(description = "Access denied", responseCode = "403")
         ]
     )
     @GetMapping(produces = ["application/json", "application/xml", "application/x-yaml"])
-    fun findAll(): ResponseEntity<List<BookDTO>> {
-        val body: List<BookDTO> = this.service.findAll()
+    fun findAll(
+        @RequestParam(value = "page", defaultValue = "0") page: Int,
+        @RequestParam(value = "limit", defaultValue = "12") limit: Int,
+        @RequestParam(value = "direction", defaultValue = "asc") direction: String
 
-        body.forEach { it.add(linkTo(methodOn(this::class.java).findById(it.bookId)).withSelfRel()) }
+    ): ResponseEntity<CollectionModel<BookDTO>> {
+        val sort: Sort = if (direction == "desc") Sort.by("id").descending() else Sort.by("id").ascending()
 
-        return ok(body)
+        val pageable: Pageable = PageRequest.of(page, limit, sort)
+
+        val books: Page<BookDTO> = this.service.findAll(pageable).onEach {
+            it.add(linkTo(methodOn(this::class.java).findById(it.bookId)).withSelfRel())
+        }
+
+        return ok(CollectionModel.of(books))
     }
 
     @Operation(
@@ -50,7 +65,7 @@ class BookController {
     fun findById(@PathVariable("id") id: Long): ResponseEntity<BookDTO> {
         val bookDTO: BookDTO = this.service.findById(id)
 
-        bookDTO.add(linkTo(methodOn(this::class.java).findAll()).withRel("All books"))
+        bookDTO.add(linkTo(methodOn(this::class.java).findById(id)).withRel("All books"))
 
         return ok(bookDTO)
     }

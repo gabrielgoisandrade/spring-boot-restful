@@ -11,6 +11,7 @@ import org.springframework.data.domain.PageRequest
 import org.springframework.data.domain.Pageable
 import org.springframework.data.domain.Sort
 import org.springframework.data.web.PagedResourcesAssembler
+import org.springframework.hateoas.CollectionModel
 import org.springframework.hateoas.EntityModel
 import org.springframework.hateoas.PagedModel
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo
@@ -38,8 +39,18 @@ class UserController {
     @Autowired
     private lateinit var service: UserService
 
+    /**
+     * # Listagem de usuários com paginação
+     *
+     * Esse método utiliza o HATEOAS para gerir a paginação de forma mais informativa, mostrando até os links para as
+     * próximas páginas.
+     *
+     * A paginação foi feita sem o uso do example, onde deixou a implementação mais rápida, porém mais "suja".
+     *
+     * @author Gabriel Gois Andrade
+     * */
     @Operation(
-        description = "Get all recorded users",
+        description = "Get all recorded users with an optional pagination",
         responses = [
             ApiResponse(description = "OK", responseCode = "200"),
             ApiResponse(description = "Access denied", responseCode = "403")
@@ -49,16 +60,17 @@ class UserController {
     fun findAll(
         @RequestParam(value = "page", defaultValue = "0") page: Int,
         @RequestParam(value = "limit", defaultValue = "12") limit: Int,
-        @RequestParam(value = "direction", defaultValue = "asc") direction: String,
-        assembler: PagedResourcesAssembler<UserDTO>
-    ): ResponseEntity<PagedModel<EntityModel<UserDTO>>> {
+        @RequestParam(value = "direction", defaultValue = "asc") direction: String
+    ): ResponseEntity<CollectionModel<UserDTO>> {
+        val sort: Sort = if (direction == "desc") Sort.by("id").descending() else Sort.by("id").ascending()
 
-        val pageable: Pageable = PageRequest.of(page, limit, Sort.by(Sort.Direction.DESC))
+        val pageable: Pageable = PageRequest.of(page, limit, sort)
 
-        val users: Page<UserDTO> = this.service.findAll(pageable)
-        users.forEach { it.add(linkTo(methodOn(this::class.java).findById(it.personId)).withSelfRel()) }
+        val users: Page<UserDTO> = this.service.findAll(pageable).onEach {
+            it.add(linkTo(methodOn(this::class.java).findById(it.personId)).withSelfRel())
+        }
 
-        return ok(assembler!!.toModel(users))
+        return ok(CollectionModel.of(users))
     }
 
     @Operation(

@@ -27,10 +27,10 @@ class UserService {
         parseObject(this, UserDTO::class.java)
     }
 
-    fun findAll(pageable: Pageable): Page<UserDTO> {
-        val page: Page<UserModel> = this.repository.findAll(pageable)
-        return page.map { parseObject(it, UserDTO::class.java) }
-    }
+    fun findAll(pageable: Pageable): Page<UserDTO> =
+        this.repository.findAll(pageable).run {
+            this.map { parseObject(it, UserDTO::class.java) }
+        }
 
     @Transactional
     fun createPerson(userDTO: UserDTO): UserDTO =

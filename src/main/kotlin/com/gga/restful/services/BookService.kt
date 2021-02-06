@@ -5,7 +5,10 @@ import com.gga.restful.models.BookModel
 import com.gga.restful.models.dto.BookDTO
 import com.gga.restful.repositories.BookRepository
 import com.gga.restful.utils.ConverterUtil
+import com.gga.restful.utils.ConverterUtil.Companion.parseObject
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.data.domain.Page
+import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
@@ -18,17 +21,20 @@ class BookService {
     fun findById(id: Long): BookDTO = this.repository.findById(id).orElseThrow {
         BookNotFoundException("Book not found.")
     }.run {
-        ConverterUtil.parseObject(this, BookDTO::class.java)
+        parseObject(this, BookDTO::class.java)
     }
 
-    fun findAll(): List<BookDTO> = ConverterUtil.parseListObjects(repository.findAll(), BookDTO::class.java)
+    fun findAll(pageable: Pageable): Page<BookDTO> =
+        this.repository.findAll(pageable).run {
+            this.map { parseObject(it, BookDTO::class.java) }
+        }
 
     @Transactional
     fun createBook(BookDTO: BookDTO): BookDTO {
-        val entity: BookModel = ConverterUtil.parseObject(BookDTO, BookModel::class.java)
+        val entity: BookModel = parseObject(BookDTO, BookModel::class.java)
 
         this.repository.save(entity).run {
-            return ConverterUtil.parseObject(this, BookDTO::class.java)
+            return parseObject(this, BookDTO::class.java)
         }
     }
 
@@ -49,7 +55,7 @@ class BookService {
         }
 
         this.repository.save(newBook).run {
-            return ConverterUtil.parseObject(this, BookDTO::class.java)
+            return parseObject(this, BookDTO::class.java)
         }
 
     }

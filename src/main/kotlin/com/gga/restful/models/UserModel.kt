@@ -25,5 +25,4 @@ data class UserModel @JvmOverloads constructor(
 
     @Column(name = "PASSWORD", nullable = false, length = 100)
     var password: String
-
 ) : Serializable
