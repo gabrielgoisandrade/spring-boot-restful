@@ -4,7 +4,6 @@ import com.gga.restful.errors.exceptions.BookNotFoundException
 import com.gga.restful.models.BookModel
 import com.gga.restful.models.dto.BookDTO
 import com.gga.restful.repositories.BookRepository
-import com.gga.restful.utils.ConverterUtil
 import com.gga.restful.utils.ConverterUtil.Companion.parseObject
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.domain.Page

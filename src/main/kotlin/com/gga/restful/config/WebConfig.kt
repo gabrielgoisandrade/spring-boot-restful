@@ -1,8 +1,6 @@
 package com.gga.restful.config
 
 import org.springframework.context.annotation.Configuration
-import org.springframework.hateoas.config.EnableHypermediaSupport
-import org.springframework.hateoas.support.WebStack
 import org.springframework.http.MediaType
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.http.MediaType.APPLICATION_XML
