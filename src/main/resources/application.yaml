@@ -3,6 +3,14 @@ server:
     context-path: /api
 
 spring:
+
+  # File config
+  servlet:
+    multipart:
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+
   # Database config
   datasource:
     url: jdbc:h2:mem:restful
@@ -38,3 +46,6 @@ springdoc:
   swagger-ui:
     path: /
 
+# File config
+file:
+  upload-dir: /Users/Gabriel/Desktop/
