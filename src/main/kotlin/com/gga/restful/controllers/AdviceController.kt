@@ -13,22 +13,28 @@ import org.springframework.web.context.request.WebRequest
 @RestControllerAdvice
 class AdviceController {
 
-    @ExceptionHandler(
-        PersonNotFoundException::class,
-        BookNotFoundException::class,
-        UsernameNotFoundException::class,
-        FileNotFoundException::class
-    )
+    @ExceptionHandler(PersonNotFoundException::class)
     fun handler(ex: PersonNotFoundException, request: WebRequest): ResponseEntity<ApiErrors> =
+        ApiErrors(ex.message!!, request.getDescription(false)).run { status(NOT_FOUND).body(this) }
+
+    @ExceptionHandler(BookNotFoundException::class)
+    fun handler(ex: BookNotFoundException, request: WebRequest): ResponseEntity<ApiErrors> =
+        ApiErrors(ex.message!!, request.getDescription(false)).run { status(NOT_FOUND).body(this) }
+
+    @ExceptionHandler(UsernameNotFoundException::class)
+    fun handler(ex: UsernameNotFoundException, request: WebRequest): ResponseEntity<ApiErrors> =
+        ApiErrors(ex.message!!, request.getDescription(false)).run { status(NOT_FOUND).body(this) }
+
+    @ExceptionHandler(FileNotFoundException::class)
+    fun handler(ex: FileNotFoundException, request: WebRequest): ResponseEntity<ApiErrors> =
         ApiErrors(ex.message!!, request.getDescription(false)).run { status(NOT_FOUND).body(this) }
 
     @ExceptionHandler(AuthException::class)
     fun handler(ex: AuthException, request: WebRequest): ResponseEntity<ApiErrors> =
         ApiErrors(ex.message!!, request.getDescription(false)).run { status(UNAUTHORIZED).body(this) }
 
-    @ExceptionHandler(FileStorageException::class)
-    fun handler(ex: FileStorageException, request: WebRequest): ResponseEntity<ApiErrors> =
+    @ExceptionHandler(FileException::class)
+    fun handler(ex: FileException, request: WebRequest): ResponseEntity<ApiErrors> =
         ApiErrors(ex.message!!, request.getDescription(false)).run { status(INTERNAL_SERVER_ERROR).body(this) }
-
 
 }

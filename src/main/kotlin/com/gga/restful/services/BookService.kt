@@ -1,5 +1,6 @@
 package com.gga.restful.services
 
+import com.gga.restful.errors.exceptions.AuthException
 import com.gga.restful.errors.exceptions.BookNotFoundException
 import com.gga.restful.models.BookModel
 import com.gga.restful.models.dto.BookDTO
@@ -17,6 +18,7 @@ class BookService {
     @Autowired
     private lateinit var repository: BookRepository
 
+    @Throws(BookNotFoundException::class)
     fun findById(id: Long): BookDTO = this.repository.findById(id).orElseThrow {
         BookNotFoundException("Book not found.")
     }.run {
@@ -38,6 +40,7 @@ class BookService {
     }
 
     @Transactional
+    @Throws(BookNotFoundException::class)
     fun updateBook(BookDTO: BookDTO): BookDTO {
         // Houve outra chamada do findById porque a conexão com o database fecha a cada vez que um comando é executado.
         val currentBook: BookModel = this.repository.findById(BookDTO.bookId).orElseThrow {

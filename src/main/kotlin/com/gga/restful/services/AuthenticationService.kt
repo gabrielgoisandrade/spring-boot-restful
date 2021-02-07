@@ -1,11 +1,11 @@
 package com.gga.restful.services
 
-import com.gga.restful.errors.exceptions.AuthException
 import com.gga.restful.models.UserModel
 import com.gga.restful.models.dto.LoginDTO
 import com.gga.restful.repositories.UserRepository
 import com.gga.restful.security.JwtTokenProvider
 import com.gga.restful.utils.AuthenticationUtil.Companion.verify
+import com.gga.restful.utils.AuthenticationUtil.Companion.verifyPassword
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.security.core.userdetails.User
 import org.springframework.security.core.userdetails.UserDetails
@@ -28,9 +28,8 @@ class AuthenticationService : UserDetailsService {
 
     fun authenticate(loginDTO: LoginDTO): HashMap<String, Any> =
         this.loadUserByUsername(loginDTO.username).verify().run {
-            verifyPassword(loginDTO.password, this.password)
+            verifyPassword(encoder, loginDTO.password, this.password)
 
-            // para não ter que criar um DTO só para o token
             hashMapOf("token" to provider.createToken(loginDTO.username))
         }
 
@@ -42,6 +41,7 @@ class AuthenticationService : UserDetailsService {
      * Esse valor é lido durante o Filter (que ocorre antes da requisição chegar no controller), ali as devidas
      * ações serão tomadas.
      *
+     * @param username usuário a ser buscado para autenticação
      * @see com.gga.restful.security.JwtTokenFilter
      * @author Gabriel Gois Andrade
      * */
@@ -55,10 +55,6 @@ class AuthenticationService : UserDetailsService {
                 .roles("")
                 .build()
         }
-    }
-
-    private fun verifyPassword(password: String, toCompare: String) {
-        if (!encoder.matches(password, toCompare)) throw AuthException("Invalid password.")
     }
 
 }

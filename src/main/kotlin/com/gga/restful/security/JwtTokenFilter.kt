@@ -16,7 +16,6 @@ import javax.servlet.FilterChain
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
-
 class JwtTokenFilter(
     private val tokenProvider: JwtTokenProvider,
     private val authenticationService: AuthenticationService
@@ -34,7 +33,7 @@ class JwtTokenFilter(
      *
      * Além de realizar a interceptação durante as requisições, esse método também fica responsável por tratar as
      * possíveis exceptions que virão. Para tratá-las, deve-se retornar o erro "manualmente" em forma de JSON, como
-     * está sendo feito no [raiseException][com.gga.restful.security.jwt.JwtTokenFilter.raiseException].
+     * está sendo feito no [raiseException][raiseException].
      *
      * @see com.gga.restful.config.SecurityConfig
      * @author Gabriel Gois Andrade
@@ -77,6 +76,8 @@ class JwtTokenFilter(
     }
 
     /**
+     * # Manipulador de exception
+     *
      * Trata a exception retornando um JSON, assim como o AdviceController.
      *
      * @param request informações da requisição

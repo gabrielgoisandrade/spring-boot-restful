@@ -28,7 +28,7 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
     private lateinit var authenticationService: AuthenticationService
 
     @Bean
-    fun bCrypt(): BCryptPasswordEncoder = BCryptPasswordEncoder() //para encriptar a senha
+    fun bCrypt(): BCryptPasswordEncoder = BCryptPasswordEncoder()
 
     @Bean
     fun requestFilter(): OncePerRequestFilter = JwtTokenFilter(this.tokenProvider, this.authenticationService)
@@ -43,6 +43,7 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
             .and()
             .authorizeRequests()
             .antMatchers(HttpMethod.POST, "/user", "/book", "/auth").permitAll()
+            .antMatchers("/file/**").authenticated()
             .antMatchers(HttpMethod.GET, "/user", "/book").authenticated()
             .antMatchers(HttpMethod.PUT, "/user", "/book").authenticated()
             .antMatchers(HttpMethod.DELETE, "/user", "/book").authenticated()

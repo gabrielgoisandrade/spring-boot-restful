@@ -1,9 +1,11 @@
 package com.gga.restful.config
 
+import io.swagger.v3.oas.models.Components
 import io.swagger.v3.oas.models.OpenAPI
 import io.swagger.v3.oas.models.info.Contact
 import io.swagger.v3.oas.models.info.Info
 import io.swagger.v3.oas.models.info.License
+import io.swagger.v3.oas.models.security.SecurityScheme
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
@@ -37,7 +39,18 @@ class OpenApiConfig {
         .name("Gabriel Gois Andrade")
         .email("gabriel.gois.andrade14@gmail.com")
 
+    private fun component(): Components = Components().addSecuritySchemes("Access token", this.securityScheme())
+
+    private fun securityScheme(): SecurityScheme = SecurityScheme()
+        .`in`(SecurityScheme.In.HEADER)
+        .name("Authorization")
+        .type(SecurityScheme.Type.HTTP)
+        .scheme("bearer")
+        .bearerFormat("JWT")
+
     @Bean
-    fun openApi(): OpenAPI = OpenAPI().info(this.info())
+    fun openApi(): OpenAPI = OpenAPI()
+        .info(this.info())
+        .components(this.component())
 
 }

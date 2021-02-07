@@ -1,5 +1,6 @@
 package com.gga.restful.services
 
+import com.gga.restful.errors.exceptions.BookNotFoundException
 import com.gga.restful.errors.exceptions.PersonNotFoundException
 import com.gga.restful.models.UserModel
 import com.gga.restful.models.dto.UserDTO
@@ -21,6 +22,7 @@ class UserService {
     @Autowired
     private lateinit var encoder: BCryptPasswordEncoder
 
+    @Throws(PersonNotFoundException::class)
     fun findById(id: Long): UserDTO = this.repository.findById(id).orElseThrow {
         PersonNotFoundException("Person not found.")
     }.run {
@@ -39,8 +41,8 @@ class UserService {
         }
 
     @Transactional
+    @Throws(PersonNotFoundException::class)
     fun updatePerson(userDTO: UserDTO): UserDTO {
-
         // Houve outra chamada do findById porque a conexão com o database fecha a cada vez que um comando é executado.
         val currentUser: UserModel = this.repository.findById(userDTO.personId).orElseThrow {
             PersonNotFoundException("Person not found.")

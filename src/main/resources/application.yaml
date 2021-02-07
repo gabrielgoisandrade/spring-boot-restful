@@ -1,3 +1,4 @@
+# Server config
 server:
   servlet:
     context-path: /api
@@ -36,6 +37,7 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: America/Sao_Paulo
 
+# JWT config
 security:
   jwt:
     secret-key: secret
@@ -49,3 +51,13 @@ springdoc:
 # File config
 file:
   upload-dir: /Users/Gabriel/Desktop/
+
+# Log config
+logging:
+  file:
+    name: startup.log
+
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      clean-history-on-start: true
