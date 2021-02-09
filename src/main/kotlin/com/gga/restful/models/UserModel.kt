@@ -6,7 +6,7 @@ import javax.persistence.GenerationType.IDENTITY
 import javax.validation.constraints.Email
 
 @Entity
-@Table(name = "USER")
+@Table(name = "TB_USER")
 data class UserModel @JvmOverloads constructor(
     @Id
     @GeneratedValue(strategy = IDENTITY)
@@ -16,7 +16,7 @@ data class UserModel @JvmOverloads constructor(
     @Column(name = "NAME", nullable = false, length = 30)
     var name: String,
 
-    @Column(name = "LAST_NAME", nullable = false, length = 80)
+    @Column(name = "LAST_NAME", nullable = false, length = 50)
     var lastName: String,
 
     @Email

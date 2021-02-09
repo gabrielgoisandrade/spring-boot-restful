@@ -14,28 +14,41 @@ spring:
 
   # Database config
   datasource:
-    url: jdbc:h2:mem:restful
-    driver-class-name: org.h2.Driver
-    username: sa
-    initialization-mode: always
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5438/docker_spring_restful
+    username: postgres
+    password: 1234
 
   # JPA config
   jpa:
     show-sql: true
-    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none
 
     properties:
       hibernate:
         format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
 
   # Jackson config
   jackson:
     default-property-inclusion: non_null
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: America/Sao_Paulo
+
+  # Flyway config
+  flyway:
+    url: jdbc:postgresql://localhost:5438/docker_spring_restful
+    schemas: docker_spring_restful_schema
+    user: postgres
+    password: 1234
+    locations: classpath:db/migration
+    check-location: true
+    baseline-on-migrate: true
 
 # JWT config
 security:
@@ -61,3 +74,4 @@ logging:
     rollingpolicy:
       max-file-size: 10MB
       clean-history-on-start: true
+

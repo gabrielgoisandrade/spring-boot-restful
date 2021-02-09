@@ -22,6 +22,7 @@ repositories {
     mavenCentral()
 }
 
+apply(plugin = "base")
 extra["springBootAdminVersion"] = "2.3.1"
 
 dependencies {
@@ -56,7 +57,10 @@ dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
 
     /* PostgreSQL */
-    runtimeOnly("com.h2database:h2")
+    runtimeOnly("org.postgresql:postgresql")
+
+    /* Flyway - Versionamento de banco de dados */
+    runtimeOnly( group= "org.flywaydb", name= "flyway-core", version= "7.5.2")
 
     /* Kotlin */
     implementation("org.jetbrains.kotlin:kotlin-reflect")
