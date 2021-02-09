@@ -6,24 +6,18 @@ plugins {
     kotlin("jvm") version "1.4.21"
     kotlin("plugin.spring") version "1.4.21"
     kotlin("plugin.jpa") version "1.4.21"
+    jacoco
 }
 
+
+description = "From Rest to GLORY of Rest."
 group = "com.gga"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_15
 
-configurations {
-    compileOnly {
-        extendsFrom(configurations.annotationProcessor.get())
-    }
-}
-
 repositories {
     mavenCentral()
 }
-
-apply(plugin = "base")
-extra["springBootAdminVersion"] = "2.3.1"
 
 dependencies {
 
@@ -60,7 +54,7 @@ dependencies {
     runtimeOnly("org.postgresql:postgresql")
 
     /* Flyway - Versionamento de banco de dados */
-    runtimeOnly( group= "org.flywaydb", name= "flyway-core", version= "7.5.2")
+    runtimeOnly("org.flywaydb:flyway-core")
 
     /* Kotlin */
     implementation("org.jetbrains.kotlin:kotlin-reflect")
@@ -72,12 +66,6 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
-dependencyManagement {
-    imports {
-        mavenBom("de.codecentric:spring-boot-admin-dependencies:${property("springBootAdminVersion")}")
-    }
-}
-
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict")
@@ -87,4 +75,13 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+tasks.jacocoTestReport {
+    reports {
+        xml.isEnabled = true
+        xml.destination = file("${buildDir}/jacocoHtml")
+        csv.isEnabled = false
+        html.isEnabled = false
+    }
 }

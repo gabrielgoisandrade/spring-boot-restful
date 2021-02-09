@@ -15,9 +15,9 @@ spring:
   # Database config
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5438/docker_spring_restful
-    username: postgres
-    password: 1234
+    url: jdbc:postgresql://ec2-54-225-190-241.compute-1.amazonaws.com/df9d5l7msrhdh6
+    username: bbsqfwsgtnjtaz
+    password: bc9f8992c51b895ba686ea1e35de4fc6e5b244826638df008d032cb70fd6ec77
 
   # JPA config
   jpa:
@@ -42,10 +42,10 @@ spring:
 
   # Flyway config
   flyway:
-    url: jdbc:postgresql://localhost:5438/docker_spring_restful
+    url: jdbc:postgresql://ec2-54-225-190-241.compute-1.amazonaws.com/df9d5l7msrhdh6
     schemas: docker_spring_restful_schema
-    user: postgres
-    password: 1234
+    user: bbsqfwsgtnjtaz
+    password: bc9f8992c51b895ba686ea1e35de4fc6e5b244826638df008d032cb70fd6ec77
     locations: classpath:db/migration
     check-location: true
     baseline-on-migrate: true
@@ -74,4 +74,3 @@ logging:
     rollingpolicy:
       max-file-size: 10MB
       clean-history-on-start: true
-
