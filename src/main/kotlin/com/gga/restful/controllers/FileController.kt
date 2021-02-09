@@ -5,6 +5,7 @@ import com.gga.restful.services.FileService
 import com.gga.restful.utils.FileUtil.Companion.linkToDownLoad
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.responses.ApiResponse
+import io.swagger.v3.oas.annotations.security.SecurityRequirement
 import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.core.io.Resource
@@ -45,7 +46,8 @@ class FileController {
         responses = [
             ApiResponse(description = "OK", responseCode = "200"),
             ApiResponse(description = "Parameter 'file' empty", responseCode = "415")
-        ]
+        ],
+        security = [SecurityRequirement(name = "Access token")]
     )
     @PostMapping("/upload-file", consumes = ["multipart/form-data"])
     fun uploadFile(@RequestParam("file") file: MultipartFile): ResponseEntity<FileDTO> =
@@ -70,9 +72,12 @@ class FileController {
     @Operation(
         description = "Upload files",
         responses = [
-            ApiResponse(description = "OK", responseCode = "200"),
-            ApiResponse(description = "Parameter 'files' empty", responseCode = "415")
-        ]
+            ApiResponse(description = "File stored", responseCode = "200"),
+            ApiResponse(description = "Needs access token", responseCode = "403"),
+            ApiResponse(description = "Parameter 'files' empty", responseCode = "415"),
+            ApiResponse(description = "Fail to store file", responseCode = "500")
+        ],
+        security = [SecurityRequirement(name = "Access token")]
     )
     @PostMapping("/upload-files", consumes = ["multipart/form-data"])
     fun uploadFiles(@RequestParam("files") files: List<MultipartFile>): ResponseEntity<List<FileDTO>> =
@@ -93,7 +98,15 @@ class FileController {
      * @see com.gga.restful.services.FileService.findFile
      * @author Gabriel Gois Andrade
      * */
-    @Operation(description = "Download file", responses = [ApiResponse(description = "OK", responseCode = "200")])
+    @Operation(
+        description = "Download file",
+        responses = [
+            ApiResponse(description = "File found", responseCode = "200"),
+            ApiResponse(description = "Needs access token", responseCode = "403"),
+            ApiResponse(description = "File not found", responseCode = "404")
+        ],
+        security = [SecurityRequirement(name = "Access token")]
+    )
     @GetMapping("/download-file/{fileName:.+}") //diz que pode receber uma extensão
     fun downloadFile(
         @PathVariable("fileName") fileName: String,

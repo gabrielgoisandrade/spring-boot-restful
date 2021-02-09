@@ -8,7 +8,6 @@ plugins {
     kotlin("plugin.jpa") version "1.4.21"
 }
 
-
 description = "From Rest to GLORY of Rest."
 group = "com.gga"
 version = "0.0.1-SNAPSHOT"
@@ -74,4 +73,11 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+// expondo propriedades para o application.yml
+tasks.processResources {
+    filesMatching("application.yml") {
+        expand(project.properties)
+    }
 }

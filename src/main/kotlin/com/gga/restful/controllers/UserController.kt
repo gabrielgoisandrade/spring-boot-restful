@@ -4,6 +4,7 @@ import com.gga.restful.models.dto.UserDTO
 import com.gga.restful.services.UserService
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.responses.ApiResponse
+import io.swagger.v3.oas.annotations.security.SecurityRequirement
 import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.domain.Page
@@ -49,9 +50,10 @@ class UserController {
     @Operation(
         description = "Get all recorded users with an optional pagination",
         responses = [
-            ApiResponse(description = "OK", responseCode = "200"),
-            ApiResponse(description = "Access denied", responseCode = "403")
-        ]
+            ApiResponse(description = "Users found", responseCode = "200"),
+            ApiResponse(description = "Needs access token", responseCode = "403")
+        ],
+        security = [SecurityRequirement(name = "Access token")]
     )
     @GetMapping(produces = ["application/json", "application/xml", "application/x-yaml"])
     fun findAll(
@@ -73,10 +75,11 @@ class UserController {
     @Operation(
         description = "Get recorded user by its ID",
         responses = [
-            ApiResponse(description = "OK", responseCode = "200"),
+            ApiResponse(description = "User found", responseCode = "200"),
             ApiResponse(description = "User not found", responseCode = "404"),
-            ApiResponse(description = "Access denied", responseCode = "403")
-        ]
+            ApiResponse(description = "Needs access token", responseCode = "403")
+        ],
+        security = [SecurityRequirement(name = "Access token")]
     )
     @GetMapping("/{id}", produces = ["application/json", "application/xml", "application/x-yaml"])
     fun findById(@PathVariable("id") id: Long): ResponseEntity<UserDTO> {
@@ -88,11 +91,8 @@ class UserController {
         return ok(userDTO)
     }
 
-    @Operation(
-        description = "Record a new user",
-        responses = [ApiResponse(description = "Created", responseCode = "201")],
-        requestBody = Body(description = "User's body")
-    )
+    @ApiResponse(description = "New user saved", responseCode = "201")
+    @Operation(description = "Record a new user", requestBody = Body(description = "User's body"))
     @PostMapping(
         produces = ["application/json", "application/xml", "application/x-yaml"], // produz (retorna) json, xml e yaml
         consumes = ["application/json", "application/xml", "application/x-yaml"] // consome (recebe) json, xml e yaml
@@ -108,10 +108,12 @@ class UserController {
     @Operation(
         description = "Update a existing user",
         responses = [
-            ApiResponse(description = "OK", responseCode = "200"),
-            ApiResponse(description = "Access denied", responseCode = "403")
+            ApiResponse(description = "User updated", responseCode = "200"),
+            ApiResponse(description = "Needs access token", responseCode = "403"),
+            ApiResponse(description = "User not found", responseCode = "404"),
         ],
-        requestBody = Body(description = "User's body")
+        requestBody = Body(description = "User's body"),
+        security = [SecurityRequirement(name = "Access token")]
     )
     @PutMapping(
         produces = ["application/json", "application/xml", "application/x-yaml"],
@@ -128,9 +130,11 @@ class UserController {
     @Operation(
         description = "Delete a existing user by its ID",
         responses = [
-            ApiResponse(description = "No Content", responseCode = "204"),
-            ApiResponse(description = "Access denied", responseCode = "403")
-        ]
+            ApiResponse(description = "User deleted", responseCode = "204"),
+            ApiResponse(description = "Needs access token", responseCode = "403"),
+            ApiResponse(description = "User not found", responseCode = "404")
+        ],
+        security = [SecurityRequirement(name = "Access token")]
     )
     @DeleteMapping("/{id}")
     fun deletePerson(@PathVariable("id") id: Long): ResponseEntity<Void> {

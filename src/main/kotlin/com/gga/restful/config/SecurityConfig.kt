@@ -43,7 +43,7 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
             .and()
             .authorizeRequests()
             .antMatchers(HttpMethod.POST, "/user", "/book", "/auth").permitAll()
-            .antMatchers("/file/**").authenticated()
+            .antMatchers("file/**").authenticated()
             .antMatchers(HttpMethod.GET, "/user", "/book").authenticated()
             .antMatchers(HttpMethod.PUT, "/user", "/book").authenticated()
             .antMatchers(HttpMethod.DELETE, "/user", "/book").authenticated()

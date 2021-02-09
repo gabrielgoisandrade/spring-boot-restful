@@ -1,1 +1,1 @@
-rootProject.name = "restful"
+rootProject.name = "Spring RestFul"

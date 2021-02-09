@@ -4,6 +4,7 @@ import com.gga.restful.models.dto.BookDTO
 import com.gga.restful.services.BookService
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.responses.ApiResponse
+import io.swagger.v3.oas.annotations.security.SecurityRequirement
 import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.domain.Page
@@ -30,9 +31,10 @@ class BookController {
     @Operation(
         description = "Get all recorded books with an optional pagination",
         responses = [
-            ApiResponse(description = "OK", responseCode = "200"),
-            ApiResponse(description = "Access denied", responseCode = "403")
-        ]
+            ApiResponse(description = "Books found", responseCode = "200"),
+            ApiResponse(description = "Needs the access token", responseCode = "403")
+        ],
+        security = [SecurityRequirement(name = "Access token")]
     )
     @GetMapping(produces = ["application/json", "application/xml", "application/x-yaml"])
     fun findAll(
@@ -55,10 +57,11 @@ class BookController {
     @Operation(
         description = "Get recorded book by its ID",
         responses = [
-            ApiResponse(description = "OK", responseCode = "200"),
-            ApiResponse(description = "Book not found", responseCode = "404"),
-            ApiResponse(description = "Access denied", responseCode = "403")
-        ]
+            ApiResponse(description = "Book found", responseCode = "200"),
+            ApiResponse(description = "Needs the access token", responseCode = "403"),
+            ApiResponse(description = "Book not found", responseCode = "404")
+        ],
+        security = [SecurityRequirement(name = "Access token")]
     )
     @GetMapping("/{id}", produces = ["application/json", "application/xml", "application/x-yaml"])
     fun findById(@PathVariable("id") id: Long): ResponseEntity<BookDTO> {
@@ -69,11 +72,8 @@ class BookController {
         return ok(bookDTO)
     }
 
-    @Operation(
-        description = "Record a new book",
-        responses = [ApiResponse(description = "Created", responseCode = "201")],
-        requestBody = Body(description = "Book's body")
-    )
+    @ApiResponse(description = "New Book saved", responseCode = "201")
+    @Operation(description = "Record a new book", requestBody = Body(description = "Book's body"))
     @PostMapping(
         produces = ["application/json", "application/xml", "application/x-yaml"], // produz (retorna) json, xml e yaml
         consumes = ["application/json", "application/xml", "application/x-yaml"] // consome (recebe) json, xml e yaml
@@ -89,10 +89,12 @@ class BookController {
     @Operation(
         description = "Update a existing book",
         responses = [
-            ApiResponse(description = "OK", responseCode = "200"),
-            ApiResponse(description = "Access denied", responseCode = "403")
+            ApiResponse(description = "Book updated", responseCode = "200"),
+            ApiResponse(description = "Needs the access token", responseCode = "403"),
+            ApiResponse(description = "Book not found", responseCode = "404")
         ],
-        requestBody = Body(description = "Book's body")
+        requestBody = Body(description = "Book's body"),
+        security = [SecurityRequirement(name = "Access token")]
     )
     @PutMapping(
         produces = ["application/json", "application/xml", "application/x-yaml"],
@@ -109,9 +111,11 @@ class BookController {
     @Operation(
         description = "Delete a existing book by its ID",
         responses = [
-            ApiResponse(description = "No Content", responseCode = "204"),
-            ApiResponse(description = "Access denied", responseCode = "403")
-        ]
+            ApiResponse(description = "Book deleted", responseCode = "204"),
+            ApiResponse(description = "Needs the access token", responseCode = "403"),
+            ApiResponse(description = "Book not found", responseCode = "404")
+        ],
+        security = [SecurityRequirement(name = "Access token")]
     )
     @DeleteMapping("/{id}")
     fun deleteBook(@PathVariable("id") id: Long): ResponseEntity<Void> {

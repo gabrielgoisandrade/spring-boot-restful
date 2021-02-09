@@ -69,3 +69,30 @@ logging:
     rollingpolicy:
       max-file-size: 10MB
       clean-history-on-start: true
+
+doc:
+  info:
+    name: ${project.name}
+    description: ${project.description}
+    version: ${project.version}
+
+    contact:
+      url: https://github.com/gabrielgoisandrade/
+      name: Gabriel Gois Andrade
+      email: gabriel.gois.andrade14@gmail.com
+
+    license:
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+      name: Apache License 2.0
+
+    terms-of-service: http://springdoc.org/
+
+  security:
+    global-key: Access token
+    scheme: bearer
+    bearer-format: JWT
+    description: Do auth, copy the token returned, and paste it here to unlock the others requests. It'll save your time! ;)
+
+  server:
+    description: Service hosted on heroku.
+    url: https://spring-boot-restful.herokuapp.com/

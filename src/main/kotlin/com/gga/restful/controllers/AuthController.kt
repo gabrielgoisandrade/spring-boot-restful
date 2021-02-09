@@ -24,10 +24,10 @@ class AuthController {
     private lateinit var service: AuthenticationService
 
     @Operation(
-        description = "Authenticate a user",
+        description = "Authentication",
         responses = [
-            ApiResponse(description = "Accepted", responseCode = "202"),
-            ApiResponse(description = "Unauthorized", responseCode = "401")],
+            ApiResponse(description = "User authenticated", responseCode = "202"),
+            ApiResponse(description = "Invalid credentials", responseCode = "401")],
         requestBody = Body(description = "User's credentials")
     )
     @PostMapping(
