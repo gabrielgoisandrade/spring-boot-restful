@@ -1,8 +1,11 @@
 package com.gga.restful.controllers
 
+import com.gga.restful.errors.ApiErrors
 import com.gga.restful.models.dto.BookDTO
 import com.gga.restful.services.BookService
 import io.swagger.v3.oas.annotations.Operation
+import io.swagger.v3.oas.annotations.media.Content
+import io.swagger.v3.oas.annotations.media.Schema
 import io.swagger.v3.oas.annotations.responses.ApiResponse
 import io.swagger.v3.oas.annotations.security.SecurityRequirement
 import io.swagger.v3.oas.annotations.tags.Tag
@@ -32,7 +35,10 @@ class BookController {
         description = "Get all recorded books with an optional pagination",
         responses = [
             ApiResponse(description = "Books found", responseCode = "200"),
-            ApiResponse(description = "Needs the access token", responseCode = "403")
+            ApiResponse(
+                description = "Needs the access token", responseCode = "403",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            )
         ],
         security = [SecurityRequirement(name = "Access token")]
     )
@@ -58,8 +64,14 @@ class BookController {
         description = "Get recorded book by its ID",
         responses = [
             ApiResponse(description = "Book found", responseCode = "200"),
-            ApiResponse(description = "Needs the access token", responseCode = "403"),
-            ApiResponse(description = "Book not found", responseCode = "404")
+            ApiResponse(
+                description = "Needs the access token", responseCode = "403",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            ),
+            ApiResponse(
+                description = "Book not found", responseCode = "404",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            )
         ],
         security = [SecurityRequirement(name = "Access token")]
     )
@@ -90,8 +102,14 @@ class BookController {
         description = "Update a existing book",
         responses = [
             ApiResponse(description = "Book updated", responseCode = "200"),
-            ApiResponse(description = "Needs the access token", responseCode = "403"),
-            ApiResponse(description = "Book not found", responseCode = "404")
+            ApiResponse(
+                description = "Needs the access token", responseCode = "403",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            ),
+            ApiResponse(
+                description = "Book not found", responseCode = "404",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            )
         ],
         requestBody = Body(description = "Book's body"),
         security = [SecurityRequirement(name = "Access token")]
@@ -112,8 +130,14 @@ class BookController {
         description = "Delete a existing book by its ID",
         responses = [
             ApiResponse(description = "Book deleted", responseCode = "204"),
-            ApiResponse(description = "Needs the access token", responseCode = "403"),
-            ApiResponse(description = "Book not found", responseCode = "404")
+            ApiResponse(
+                description = "Needs the access token", responseCode = "403",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            ),
+            ApiResponse(
+                description = "Book not found", responseCode = "404",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            )
         ],
         security = [SecurityRequirement(name = "Access token")]
     )

@@ -1,8 +1,11 @@
 package com.gga.restful.controllers
 
+import com.gga.restful.errors.ApiErrors
 import com.gga.restful.models.dto.LoginDTO
 import com.gga.restful.services.AuthenticationService
 import io.swagger.v3.oas.annotations.Operation
+import io.swagger.v3.oas.annotations.media.Content
+import io.swagger.v3.oas.annotations.media.Schema
 import io.swagger.v3.oas.annotations.responses.ApiResponse
 import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.beans.factory.annotation.Autowired
@@ -27,7 +30,10 @@ class AuthController {
         description = "Authentication",
         responses = [
             ApiResponse(description = "User authenticated", responseCode = "202"),
-            ApiResponse(description = "Invalid credentials", responseCode = "401")],
+            ApiResponse(
+                description = "Invalid credentials", responseCode = "401",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            )],
         requestBody = Body(description = "User's credentials")
     )
     @PostMapping(

@@ -8928,3 +8928,736 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'do
 2021-02-09 13:14:33.416  INFO 9248 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2021-02-09 13:14:33.418  INFO 9248 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
 2021-02-09 13:14:34.357  INFO 9248 --- [http-nio-8080-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 491 ms
+2021-02-09 19:53:38.511  INFO 17824 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Starting RestfulApplicationKt using Java 15.0.2 on Gabriel-PC with PID 17824 (C:\Users\Gabriel\Desktop\spring-restful\build\classes\kotlin\main started by Gabriel in C:\Users\Gabriel\Desktop\spring-restful)
+2021-02-09 19:53:38.520  INFO 17824 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : No active profile set, falling back to default profiles: default
+2021-02-09 19:53:38.726  INFO 17824 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-09 19:53:38.728  INFO 17824 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-09 19:53:41.743  INFO 17824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-09 19:53:41.982  INFO 17824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 211 ms. Found 2 JPA repository interfaces.
+2021-02-09 19:53:43.620  INFO 17824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-09 19:53:43.648  INFO 17824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-09 19:53:43.650  INFO 17824 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-09 19:53:44.015  INFO 17824 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-09 19:53:44.017  INFO 17824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5285 ms
+2021-02-09 19:53:44.231  WARN 17824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-09 19:53:44.537  INFO 17824 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-09 19:53:46.856  INFO 17824 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://ec2-54-225-190-241.compute-1.amazonaws.com/df9d5l7msrhdh6 (PostgreSQL 13.1)
+2021-02-09 19:53:48.669  INFO 17824 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.855s)
+2021-02-09 19:53:49.877  INFO 17824 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 5
+2021-02-09 19:53:50.029  INFO 17824 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2021-02-09 19:53:50.759  INFO 17824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-09 19:53:50.915  INFO 17824 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-09 19:53:51.419  INFO 17824 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-09 19:53:51.753  INFO 17824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-09 19:53:53.379  INFO 17824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-09 19:53:53.425  INFO 17824 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-02-09 19:53:55.831  INFO 17824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-09 19:53:55.856  INFO 17824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 19:53:57.851  INFO 17824 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-02-09 19:53:57.852  INFO 17824 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
+2021-02-09 19:53:57.852  INFO 17824 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-02-09 19:53:57.853  INFO 17824 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
+2021-02-09 19:53:57.854  INFO 17824 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-02-09 19:53:57.854  INFO 17824 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-02-09 19:53:57.854  INFO 17824 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**'] with []
+2021-02-09 19:53:57.935  INFO 17824 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26018156, org.springframework.security.web.context.SecurityContextPersistenceFilter@62acaddb, org.springframework.security.web.header.HeaderWriterFilter@25262fbf, org.springframework.security.web.authentication.logout.LogoutFilter@f8196cc, com.gga.restful.security.JwtTokenFilter@1c3166e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62521dfc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@320ac372, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e44edfb, org.springframework.security.web.session.SessionManagementFilter@47e0066b, org.springframework.security.web.access.ExceptionTranslationFilter@7dfac971, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@72242afd]
+2021-02-09 19:53:58.450  INFO 17824 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-09 19:53:59.787  INFO 17824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-09 19:54:00.028  INFO 17824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-09 19:54:00.114  INFO 17824 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Started RestfulApplicationKt in 22.845 seconds (JVM running for 25.53)
+2021-02-09 19:54:16.325  INFO 17824 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-09 19:54:16.327  INFO 17824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-09 19:54:16.333  INFO 17824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2021-02-09 19:56:29.264  INFO 5044 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Starting RestfulApplicationKt using Java 15.0.2 on Gabriel-PC with PID 5044 (C:\Users\Gabriel\Desktop\spring-restful\build\classes\kotlin\main started by Gabriel in C:\Users\Gabriel\Desktop\spring-restful)
+2021-02-09 19:56:29.274  INFO 5044 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : No active profile set, falling back to default profiles: default
+2021-02-09 19:56:29.434  INFO 5044 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-09 19:56:29.435  INFO 5044 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-09 19:56:32.503  INFO 5044 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-09 19:56:32.741  INFO 5044 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 214 ms. Found 2 JPA repository interfaces.
+2021-02-09 19:56:34.297  INFO 5044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-09 19:56:34.320  INFO 5044 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-09 19:56:34.322  INFO 5044 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-09 19:56:34.699  INFO 5044 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-09 19:56:34.700  INFO 5044 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5262 ms
+2021-02-09 19:56:35.052  WARN 5044 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-09 19:56:35.267  INFO 5044 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-09 19:56:37.334  INFO 5044 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://ec2-54-225-190-241.compute-1.amazonaws.com/df9d5l7msrhdh6 (PostgreSQL 13.1)
+2021-02-09 19:56:39.132  INFO 5044 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.844s)
+2021-02-09 19:56:40.340  INFO 5044 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 5
+2021-02-09 19:56:40.490  INFO 5044 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2021-02-09 19:56:41.229  INFO 5044 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-09 19:56:41.390  INFO 5044 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-09 19:56:41.784  INFO 5044 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-09 19:56:42.081  INFO 5044 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-09 19:56:43.651  INFO 5044 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-09 19:56:43.696  INFO 5044 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-02-09 19:56:46.186  INFO 5044 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-09 19:56:46.238  INFO 5044 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 19:56:49.986  INFO 5044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-02-09 19:56:49.988  INFO 5044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
+2021-02-09 19:56:49.989  INFO 5044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-02-09 19:56:49.993  INFO 5044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
+2021-02-09 19:56:49.995  INFO 5044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-02-09 19:56:49.996  INFO 5044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-02-09 19:56:49.998  INFO 5044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**'] with []
+2021-02-09 19:56:50.124  INFO 5044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1de8db86, org.springframework.security.web.context.SecurityContextPersistenceFilter@3bed22fc, org.springframework.security.web.header.HeaderWriterFilter@3125ed17, org.springframework.security.web.authentication.logout.LogoutFilter@7635330f, com.gga.restful.security.JwtTokenFilter@929371f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6921d6ef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2c48bb8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31810536, org.springframework.security.web.session.SessionManagementFilter@6ecec76b, org.springframework.security.web.access.ExceptionTranslationFilter@142716ac, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@386a75c0]
+2021-02-09 19:56:50.909  INFO 5044 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-09 19:56:54.069  INFO 5044 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-09 19:56:54.321  INFO 5044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-09 19:56:54.371  INFO 5044 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Started RestfulApplicationKt in 26.339 seconds (JVM running for 28.836)
+2021-02-09 19:56:54.543  INFO 5044 --- [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-09 19:56:54.544  INFO 5044 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-09 19:56:54.553  INFO 5044 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-02-09 19:56:59.443  INFO 5044 --- [http-nio-8080-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 3420 ms
+2021-02-09 19:57:07.271  INFO 5044 --- [Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-09 19:57:07.278  INFO 5044 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 19:57:07.291  INFO 5044 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-09 19:57:08.839  INFO 5044 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-02-09 19:57:09.115  INFO 5044 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Starting RestfulApplicationKt using Java 15.0.2 on Gabriel-PC with PID 5044 (C:\Users\Gabriel\Desktop\spring-restful\build\classes\kotlin\main started by Gabriel in C:\Users\Gabriel\Desktop\spring-restful)
+2021-02-09 19:57:09.117  INFO 5044 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : No active profile set, falling back to default profiles: default
+2021-02-09 19:57:10.432  INFO 5044 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-09 19:57:10.541  INFO 5044 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 2 JPA repository interfaces.
+2021-02-09 19:57:11.121  INFO 5044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-09 19:57:11.123  INFO 5044 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-09 19:57:11.124  INFO 5044 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-09 19:57:11.228  INFO 5044 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-09 19:57:11.229  INFO 5044 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2092 ms
+2021-02-09 19:57:11.534  WARN 5044 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-09 19:57:11.660  INFO 5044 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-09 19:57:13.231  INFO 5044 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://ec2-54-225-190-241.compute-1.amazonaws.com/df9d5l7msrhdh6 (PostgreSQL 13.1)
+2021-02-09 19:57:14.940  INFO 5044 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.788s)
+2021-02-09 19:57:16.160  INFO 5044 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 5
+2021-02-09 19:57:16.311  INFO 5044 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2021-02-09 19:57:16.823  INFO 5044 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-09 19:57:16.849  INFO 5044 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-02-09 19:57:18.392  INFO 5044 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-02-09 19:57:18.394  INFO 5044 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-02-09 19:57:19.819  INFO 5044 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-09 19:57:19.821  INFO 5044 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 19:57:20.378  INFO 5044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-02-09 19:57:20.379  INFO 5044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
+2021-02-09 19:57:20.379  INFO 5044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-02-09 19:57:20.380  INFO 5044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
+2021-02-09 19:57:20.380  INFO 5044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-02-09 19:57:20.381  INFO 5044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-02-09 19:57:20.381  INFO 5044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**'] with []
+2021-02-09 19:57:20.396  INFO 5044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@37036faf, org.springframework.security.web.context.SecurityContextPersistenceFilter@7207df02, org.springframework.security.web.header.HeaderWriterFilter@27d9fb0b, org.springframework.security.web.authentication.logout.LogoutFilter@59c4ead6, com.gga.restful.security.JwtTokenFilter@1e42ef68, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d055a93, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@456cfd9b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@602f55e6, org.springframework.security.web.session.SessionManagementFilter@12b84e75, org.springframework.security.web.access.ExceptionTranslationFilter@1029fe97, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@399b3041]
+2021-02-09 19:57:20.515  INFO 5044 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-09 19:57:21.516  INFO 5044 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-09 19:57:21.552  INFO 5044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-09 19:57:21.560  INFO 5044 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Started RestfulApplicationKt in 12.571 seconds (JVM running for 56.024)
+2021-02-09 19:57:21.566  INFO 5044 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-02-09 19:58:56.742  INFO 5044 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-09 19:58:56.743  INFO 5044 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-09 19:58:56.748  INFO 5044 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2021-02-09 19:58:57.799  INFO 5044 --- [http-nio-8080-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1039 ms
+2021-02-09 20:00:38.048  INFO 21352 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Starting RestfulApplicationKt using Java 15.0.2 on Gabriel-PC with PID 21352 (C:\Users\Gabriel\Desktop\spring-restful\build\classes\kotlin\main started by Gabriel in C:\Users\Gabriel\Desktop\spring-restful)
+2021-02-09 20:00:38.058  INFO 21352 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : No active profile set, falling back to default profiles: default
+2021-02-09 20:00:38.237  INFO 21352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-09 20:00:38.239  INFO 21352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-09 20:00:41.140  INFO 21352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-09 20:00:41.347  INFO 21352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 188 ms. Found 2 JPA repository interfaces.
+2021-02-09 20:00:42.729  INFO 21352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-09 20:00:42.750  INFO 21352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-09 20:00:42.752  INFO 21352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-09 20:00:43.051  INFO 21352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-09 20:00:43.052  INFO 21352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4810 ms
+2021-02-09 20:00:43.410  WARN 21352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-09 20:00:43.609  INFO 21352 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-09 20:00:45.729  INFO 21352 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://ec2-54-225-190-241.compute-1.amazonaws.com/df9d5l7msrhdh6 (PostgreSQL 13.1)
+2021-02-09 20:00:47.545  INFO 21352 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.836s)
+2021-02-09 20:00:48.805  INFO 21352 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 5
+2021-02-09 20:00:48.961  INFO 21352 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2021-02-09 20:00:49.655  INFO 21352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-09 20:00:49.783  INFO 21352 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-09 20:00:50.139  INFO 21352 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-09 20:00:50.433  INFO 21352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-09 20:00:52.117  INFO 21352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-09 20:00:52.211  INFO 21352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-02-09 20:00:55.647  INFO 21352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-09 20:00:55.700  INFO 21352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 20:00:59.097  INFO 21352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-02-09 20:00:59.099  INFO 21352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
+2021-02-09 20:00:59.100  INFO 21352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-02-09 20:00:59.101  INFO 21352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
+2021-02-09 20:00:59.102  INFO 21352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-02-09 20:00:59.103  INFO 21352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-02-09 20:00:59.104  INFO 21352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**'] with []
+2021-02-09 20:00:59.253  INFO 21352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@70a9d0a2, org.springframework.security.web.context.SecurityContextPersistenceFilter@7c394612, org.springframework.security.web.header.HeaderWriterFilter@fa8017, org.springframework.security.web.authentication.logout.LogoutFilter@3368b7d4, com.gga.restful.security.JwtTokenFilter@2999a7d4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@436dce65, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f1c6986, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ca143da, org.springframework.security.web.session.SessionManagementFilter@52ccc40c, org.springframework.security.web.access.ExceptionTranslationFilter@7a012f2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3037d8e3]
+2021-02-09 20:00:59.943  INFO 21352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-09 20:01:02.906  INFO 21352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-09 20:01:03.089  INFO 21352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-09 20:01:03.140  INFO 21352 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Started RestfulApplicationKt in 26.394 seconds (JVM running for 28.779)
+2021-02-09 20:01:11.279  INFO 21352 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-09 20:01:11.280  INFO 21352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-09 20:01:11.283  INFO 21352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-02-09 20:01:13.974  INFO 21352 --- [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1791 ms
+2021-02-09 20:02:05.396  INFO 21352 --- [http-nio-8080-exec-1] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2021-02-09 20:02:05.402  INFO 21352 --- [http-nio-8080-exec-1] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: http-nio-8080-exec-1
+2021-02-09 20:02:05.411  INFO 21352 --- [http-nio-8080-exec-1] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2021-02-09 20:02:05.413  INFO 21352 --- [http-nio-8080-exec-1] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2021-02-09 20:02:05.430  INFO 21352 --- [http-nio-8080-exec-1] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2021-02-09 20:05:32.420  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Starting RestfulApplicationKt using Java 15.0.2 on Gabriel-PC with PID 13124 (C:\Users\Gabriel\Desktop\spring-restful\build\classes\kotlin\main started by Gabriel in C:\Users\Gabriel\Desktop\spring-restful)
+2021-02-09 20:05:32.426  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : No active profile set, falling back to default profiles: default
+2021-02-09 20:05:32.573  INFO 13124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-09 20:05:32.574  INFO 13124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-09 20:05:35.202  INFO 13124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-09 20:05:35.396  INFO 13124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 169 ms. Found 2 JPA repository interfaces.
+2021-02-09 20:05:36.836  INFO 13124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-09 20:05:36.858  INFO 13124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-09 20:05:36.859  INFO 13124 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-09 20:05:37.135  INFO 13124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-09 20:05:37.136  INFO 13124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4559 ms
+2021-02-09 20:05:37.540  WARN 13124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-09 20:05:37.758  INFO 13124 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-09 20:05:39.775  INFO 13124 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://ec2-54-225-190-241.compute-1.amazonaws.com/df9d5l7msrhdh6 (PostgreSQL 13.1)
+2021-02-09 20:05:41.501  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.801s)
+2021-02-09 20:05:42.700  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 5
+2021-02-09 20:05:42.848  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2021-02-09 20:05:43.533  INFO 13124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-09 20:05:43.650  INFO 13124 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-09 20:05:43.968  INFO 13124 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-09 20:05:44.237  INFO 13124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-09 20:05:45.826  INFO 13124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-09 20:05:45.854  INFO 13124 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-02-09 20:05:48.152  INFO 13124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-09 20:05:48.184  INFO 13124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 20:05:49.895  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-02-09 20:05:49.897  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
+2021-02-09 20:05:49.897  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-02-09 20:05:49.898  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
+2021-02-09 20:05:49.899  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-02-09 20:05:49.899  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-02-09 20:05:49.900  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**'] with []
+2021-02-09 20:05:49.970  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e79757a, org.springframework.security.web.context.SecurityContextPersistenceFilter@3fb6a891, org.springframework.security.web.header.HeaderWriterFilter@c46c2b6, org.springframework.security.web.authentication.logout.LogoutFilter@73177ac7, com.gga.restful.security.JwtTokenFilter@18cba9a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ff501a9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63095c06, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d61af42, org.springframework.security.web.session.SessionManagementFilter@6394abfe, org.springframework.security.web.access.ExceptionTranslationFilter@1ac263ae, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@60264b01]
+2021-02-09 20:05:50.305  INFO 13124 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-09 20:05:52.258  INFO 13124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-09 20:05:52.497  INFO 13124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-09 20:05:52.552  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Started RestfulApplicationKt in 20.939 seconds (JVM running for 23.134)
+2021-02-09 20:05:52.798  INFO 13124 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-09 20:05:52.800  INFO 13124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-09 20:05:52.807  INFO 13124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2021-02-09 20:05:57.365  INFO 13124 --- [http-nio-8080-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 2894 ms
+2021-02-09 20:07:17.237  INFO 13124 --- [http-nio-8080-exec-1] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2021-02-09 20:07:17.243  INFO 13124 --- [http-nio-8080-exec-1] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: http-nio-8080-exec-1
+2021-02-09 20:07:17.251  INFO 13124 --- [http-nio-8080-exec-1] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2021-02-09 20:07:17.253  INFO 13124 --- [http-nio-8080-exec-1] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2021-02-09 20:07:17.266  INFO 13124 --- [http-nio-8080-exec-1] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2021-02-09 20:12:31.609  INFO 13124 --- [Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-09 20:12:31.618  INFO 13124 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 20:12:31.632  INFO 13124 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-09 20:12:33.216  INFO 13124 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-02-09 20:12:33.665  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Starting RestfulApplicationKt using Java 15.0.2 on Gabriel-PC with PID 13124 (C:\Users\Gabriel\Desktop\spring-restful\build\classes\kotlin\main started by Gabriel in C:\Users\Gabriel\Desktop\spring-restful)
+2021-02-09 20:12:33.667  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : No active profile set, falling back to default profiles: default
+2021-02-09 20:12:35.711  INFO 13124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-09 20:12:35.810  INFO 13124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 2 JPA repository interfaces.
+2021-02-09 20:12:36.249  INFO 13124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-09 20:12:36.252  INFO 13124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-09 20:12:36.253  INFO 13124 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-09 20:12:36.361  INFO 13124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-09 20:12:36.367  INFO 13124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2607 ms
+2021-02-09 20:12:36.696  WARN 13124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-09 20:12:36.799  INFO 13124 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-09 20:12:38.373  INFO 13124 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://ec2-54-225-190-241.compute-1.amazonaws.com/df9d5l7msrhdh6 (PostgreSQL 13.1)
+2021-02-09 20:12:40.037  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.764s)
+2021-02-09 20:12:41.263  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 5
+2021-02-09 20:12:41.414  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2021-02-09 20:12:41.933  INFO 13124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-09 20:12:41.973  INFO 13124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-02-09 20:12:43.528  INFO 13124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-02-09 20:12:43.531  INFO 13124 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-02-09 20:12:45.182  INFO 13124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-09 20:12:45.183  INFO 13124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 20:12:45.717  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-02-09 20:12:45.718  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
+2021-02-09 20:12:45.718  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-02-09 20:12:45.719  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
+2021-02-09 20:12:45.720  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-02-09 20:12:45.721  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-02-09 20:12:45.721  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**'] with []
+2021-02-09 20:12:45.733  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bd29b45, org.springframework.security.web.context.SecurityContextPersistenceFilter@2642880d, org.springframework.security.web.header.HeaderWriterFilter@2bc53431, org.springframework.security.web.authentication.logout.LogoutFilter@1b481e44, com.gga.restful.security.JwtTokenFilter@2fcaaa76, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40e985c8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@420f5558, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@71773a5d, org.springframework.security.web.session.SessionManagementFilter@71d8027, org.springframework.security.web.access.ExceptionTranslationFilter@3aab8cc9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c29efd4]
+2021-02-09 20:12:45.843  INFO 13124 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-09 20:12:46.977  INFO 13124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-09 20:12:47.043  INFO 13124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-09 20:12:47.065  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Started RestfulApplicationKt in 13.691 seconds (JVM running for 437.647)
+2021-02-09 20:12:47.090  INFO 13124 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-02-09 20:12:48.490  INFO 13124 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-09 20:12:48.492  INFO 13124 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 20:12:48.495  INFO 13124 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-02-09 20:12:49.442  INFO 13124 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2021-02-09 20:12:49.742  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Starting RestfulApplicationKt using Java 15.0.2 on Gabriel-PC with PID 13124 (C:\Users\Gabriel\Desktop\spring-restful\build\classes\kotlin\main started by Gabriel in C:\Users\Gabriel\Desktop\spring-restful)
+2021-02-09 20:12:49.743  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : No active profile set, falling back to default profiles: default
+2021-02-09 20:12:51.309  INFO 13124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-09 20:12:51.377  INFO 13124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 2 JPA repository interfaces.
+2021-02-09 20:12:51.804  INFO 13124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-09 20:12:51.806  INFO 13124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-09 20:12:51.806  INFO 13124 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-09 20:12:51.857  INFO 13124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-09 20:12:51.858  INFO 13124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2097 ms
+2021-02-09 20:12:52.087  WARN 13124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-09 20:12:52.176  INFO 13124 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-09 20:12:53.818  INFO 13124 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://ec2-54-225-190-241.compute-1.amazonaws.com/df9d5l7msrhdh6 (PostgreSQL 13.1)
+2021-02-09 20:12:55.589  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.819s)
+2021-02-09 20:12:56.840  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 5
+2021-02-09 20:12:56.996  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2021-02-09 20:12:57.515  INFO 13124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-09 20:12:57.542  INFO 13124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2021-02-09 20:12:59.090  INFO 13124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2021-02-09 20:12:59.092  INFO 13124 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-02-09 20:13:00.515  INFO 13124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-09 20:13:00.516  INFO 13124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 20:13:00.925  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-02-09 20:13:00.926  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
+2021-02-09 20:13:00.926  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-02-09 20:13:00.927  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
+2021-02-09 20:13:00.927  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-02-09 20:13:00.928  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-02-09 20:13:00.928  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**'] with []
+2021-02-09 20:13:00.938  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a8bedcc, org.springframework.security.web.context.SecurityContextPersistenceFilter@1710c67e, org.springframework.security.web.header.HeaderWriterFilter@5f2324cd, org.springframework.security.web.authentication.logout.LogoutFilter@2f4e69a, com.gga.restful.security.JwtTokenFilter@42af7b4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@392489fe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f67c75b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44192163, org.springframework.security.web.session.SessionManagementFilter@392abce9, org.springframework.security.web.access.ExceptionTranslationFilter@11e7efa5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@657c0a9a]
+2021-02-09 20:13:01.018  INFO 13124 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-09 20:13:01.752  INFO 13124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-09 20:13:01.781  INFO 13124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-09 20:13:01.790  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Started RestfulApplicationKt in 12.217 seconds (JVM running for 452.371)
+2021-02-09 20:13:01.794  INFO 13124 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-02-09 20:13:41.438  INFO 13124 --- [Thread-15] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-09 20:13:41.444  INFO 13124 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 20:13:41.447  INFO 13124 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2021-02-09 20:13:42.998  INFO 13124 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2021-02-09 20:13:43.455  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Starting RestfulApplicationKt using Java 15.0.2 on Gabriel-PC with PID 13124 (C:\Users\Gabriel\Desktop\spring-restful\build\classes\kotlin\main started by Gabriel in C:\Users\Gabriel\Desktop\spring-restful)
+2021-02-09 20:13:43.457  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : No active profile set, falling back to default profiles: default
+2021-02-09 20:13:43.699  WARN 13124 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.gga.restful.RestfulApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/gga/restful/config/SecurityConfig.class] cannot be opened because it does not exist
+2021-02-09 20:13:43.842 ERROR 13124 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.gga.restful.RestfulApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/gga/restful/config/SecurityConfig.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:336) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:252) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:285) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:99) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:751) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:569) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.4.2.jar:2.4.2]
+	at com.gga.restful.RestfulApplicationKt.main(RestfulApplication.kt:13) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.4.2.jar:2.4.2]
+Caused by: java.io.FileNotFoundException: class path resource [com/gga/restful/config/SecurityConfig.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:180) ~[spring-core-5.3.3.jar:5.3.3]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55) ~[spring-core-5.3.3.jar:5.3.3]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:49) ~[spring-core-5.3.3.jar:5.3.3]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-5.3.3.jar:5.3.3]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-5.3.3.jar:5.3.3]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:304) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175) ~[spring-context-5.3.3.jar:5.3.3]
+	... 19 common frames omitted
+
+2021-02-09 20:13:45.572  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Starting RestfulApplicationKt using Java 15.0.2 on Gabriel-PC with PID 13124 (C:\Users\Gabriel\Desktop\spring-restful\build\classes\kotlin\main started by Gabriel in C:\Users\Gabriel\Desktop\spring-restful)
+2021-02-09 20:13:45.574  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : No active profile set, falling back to default profiles: default
+2021-02-09 20:13:47.241  INFO 13124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-09 20:13:47.431  INFO 13124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 186 ms. Found 2 JPA repository interfaces.
+2021-02-09 20:13:48.099  INFO 13124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-09 20:13:48.101  INFO 13124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-09 20:13:48.102  INFO 13124 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-09 20:13:48.218  INFO 13124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-09 20:13:48.219  INFO 13124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2628 ms
+2021-02-09 20:13:48.495  WARN 13124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-09 20:13:48.621  INFO 13124 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-09 20:13:50.256  INFO 13124 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://ec2-54-225-190-241.compute-1.amazonaws.com/df9d5l7msrhdh6 (PostgreSQL 13.1)
+2021-02-09 20:13:52.017  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.815s)
+2021-02-09 20:13:53.286  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 5
+2021-02-09 20:13:53.442  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2021-02-09 20:13:53.944  INFO 13124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-09 20:13:53.960  INFO 13124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2021-02-09 20:13:55.531  INFO 13124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2021-02-09 20:13:55.532  INFO 13124 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-02-09 20:13:56.982  INFO 13124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-09 20:13:56.983  INFO 13124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 20:13:57.409  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-02-09 20:13:57.410  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
+2021-02-09 20:13:57.410  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-02-09 20:13:57.411  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
+2021-02-09 20:13:57.411  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-02-09 20:13:57.411  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-02-09 20:13:57.411  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**'] with []
+2021-02-09 20:13:57.423  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4741dae9, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e45d726, org.springframework.security.web.header.HeaderWriterFilter@4d1ac09b, org.springframework.security.web.authentication.logout.LogoutFilter@1d37017, com.gga.restful.security.JwtTokenFilter@4c682857, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1bedb2ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@e8b752, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10312a96, org.springframework.security.web.session.SessionManagementFilter@48672436, org.springframework.security.web.access.ExceptionTranslationFilter@79b79b51, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6060efd7]
+2021-02-09 20:13:57.505  INFO 13124 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-09 20:13:58.361  INFO 13124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-09 20:13:58.394  INFO 13124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-09 20:13:58.403  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Started RestfulApplicationKt in 12.919 seconds (JVM running for 508.984)
+2021-02-09 20:13:58.408  INFO 13124 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-02-09 20:15:58.458  INFO 13124 --- [Thread-21] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-09 20:15:58.462  INFO 13124 --- [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 20:15:58.464  INFO 13124 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2021-02-09 20:16:00.000  INFO 13124 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2021-02-09 20:16:00.281  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Starting RestfulApplicationKt using Java 15.0.2 on Gabriel-PC with PID 13124 (C:\Users\Gabriel\Desktop\spring-restful\build\classes\kotlin\main started by Gabriel in C:\Users\Gabriel\Desktop\spring-restful)
+2021-02-09 20:16:00.282  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : No active profile set, falling back to default profiles: default
+2021-02-09 20:16:02.064  INFO 13124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-09 20:16:02.170  INFO 13124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104 ms. Found 2 JPA repository interfaces.
+2021-02-09 20:16:02.733  INFO 13124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-09 20:16:02.735  INFO 13124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-09 20:16:02.735  INFO 13124 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-09 20:16:02.800  INFO 13124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-09 20:16:02.801  INFO 13124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2508 ms
+2021-02-09 20:16:02.990  WARN 13124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-09 20:16:03.064  INFO 13124 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-09 20:16:04.666  INFO 13124 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://ec2-54-225-190-241.compute-1.amazonaws.com/df9d5l7msrhdh6 (PostgreSQL 13.1)
+2021-02-09 20:16:06.409  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.805s)
+2021-02-09 20:16:07.655  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 5
+2021-02-09 20:16:07.809  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2021-02-09 20:16:08.322  INFO 13124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-09 20:16:08.337  INFO 13124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2021-02-09 20:16:09.905  INFO 13124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2021-02-09 20:16:09.907  INFO 13124 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-02-09 20:16:11.378  INFO 13124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-09 20:16:11.379  INFO 13124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 20:16:11.795  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-02-09 20:16:11.796  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
+2021-02-09 20:16:11.797  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-02-09 20:16:11.797  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
+2021-02-09 20:16:11.797  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-02-09 20:16:11.797  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-02-09 20:16:11.798  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**'] with []
+2021-02-09 20:16:11.810  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@542ddf90, org.springframework.security.web.context.SecurityContextPersistenceFilter@7b12f69c, org.springframework.security.web.header.HeaderWriterFilter@5845f789, org.springframework.security.web.authentication.logout.LogoutFilter@4b6bbb8a, com.gga.restful.security.JwtTokenFilter@5bafb9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16aa1ce3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@61a44800, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10d932a4, org.springframework.security.web.session.SessionManagementFilter@4c814858, org.springframework.security.web.access.ExceptionTranslationFilter@6b90d8ad, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2d5e410a]
+2021-02-09 20:16:11.898  INFO 13124 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-09 20:16:12.658  INFO 13124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-09 20:16:12.689  INFO 13124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-09 20:16:12.698  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Started RestfulApplicationKt in 12.543 seconds (JVM running for 643.279)
+2021-02-09 20:16:12.701  INFO 13124 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-02-09 20:17:45.768  WARN 13124 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=1m10s153ms12µs).
+2021-02-09 20:18:12.269  INFO 13124 --- [Thread-29] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-09 20:18:12.271  INFO 13124 --- [Thread-29] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 20:18:12.271  INFO 13124 --- [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2021-02-09 20:18:13.804  INFO 13124 --- [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2021-02-09 20:18:13.972  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Starting RestfulApplicationKt using Java 15.0.2 on Gabriel-PC with PID 13124 (C:\Users\Gabriel\Desktop\spring-restful\build\classes\kotlin\main started by Gabriel in C:\Users\Gabriel\Desktop\spring-restful)
+2021-02-09 20:18:13.973  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : No active profile set, falling back to default profiles: default
+2021-02-09 20:18:14.853  INFO 13124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-09 20:18:14.943  INFO 13124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 2 JPA repository interfaces.
+2021-02-09 20:18:15.235  INFO 13124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-09 20:18:15.236  INFO 13124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-09 20:18:15.236  INFO 13124 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-09 20:18:15.302  INFO 13124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-09 20:18:15.303  INFO 13124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1320 ms
+2021-02-09 20:18:15.453  WARN 13124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-09 20:18:15.512  INFO 13124 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-09 20:18:17.076  INFO 13124 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://ec2-54-225-190-241.compute-1.amazonaws.com/df9d5l7msrhdh6 (PostgreSQL 13.1)
+2021-02-09 20:18:18.737  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.757s)
+2021-02-09 20:18:19.933  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 5
+2021-02-09 20:18:20.083  INFO 13124 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2021-02-09 20:18:20.582  INFO 13124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-09 20:18:20.603  INFO 13124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2021-02-09 20:18:22.187  INFO 13124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2021-02-09 20:18:22.188  INFO 13124 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-02-09 20:18:23.682  INFO 13124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-09 20:18:23.683  INFO 13124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 20:18:23.977  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-02-09 20:18:23.978  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
+2021-02-09 20:18:23.978  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-02-09 20:18:23.978  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
+2021-02-09 20:18:23.978  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-02-09 20:18:23.978  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-02-09 20:18:23.978  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**'] with []
+2021-02-09 20:18:23.986  INFO 13124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@66d62163, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f581792, org.springframework.security.web.header.HeaderWriterFilter@12b5263c, org.springframework.security.web.authentication.logout.LogoutFilter@33133d6c, com.gga.restful.security.JwtTokenFilter@889c115, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4def6df4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@765026b3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2eee48c1, org.springframework.security.web.session.SessionManagementFilter@4daae90c, org.springframework.security.web.access.ExceptionTranslationFilter@7a451411, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5f6057f8]
+2021-02-09 20:18:24.029  INFO 13124 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-09 20:18:24.568  INFO 13124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-09 20:18:24.592  INFO 13124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-09 20:18:24.598  INFO 13124 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Started RestfulApplicationKt in 10.693 seconds (JVM running for 779.592)
+2021-02-09 20:18:24.600  INFO 13124 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-02-09 20:18:40.935  INFO 26608 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Starting RestfulApplicationKt using Java 15.0.2 on Gabriel-PC with PID 26608 (C:\Users\Gabriel\Desktop\spring-restful\build\classes\kotlin\main started by Gabriel in C:\Users\Gabriel\Desktop\spring-restful)
+2021-02-09 20:18:40.938  INFO 26608 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : No active profile set, falling back to default profiles: default
+2021-02-09 20:18:41.018  INFO 26608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-09 20:18:41.018  INFO 26608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-09 20:18:42.730  INFO 26608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-09 20:18:42.842  INFO 26608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 2 JPA repository interfaces.
+2021-02-09 20:18:43.825  INFO 26608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-09 20:18:43.840  INFO 26608 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-09 20:18:43.841  INFO 26608 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-09 20:18:44.041  INFO 26608 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-09 20:18:44.042  INFO 26608 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3022 ms
+2021-02-09 20:18:44.267  WARN 26608 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-09 20:18:44.437  INFO 26608 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-09 20:18:46.474  INFO 26608 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://ec2-54-225-190-241.compute-1.amazonaws.com/df9d5l7msrhdh6 (PostgreSQL 13.1)
+2021-02-09 20:18:48.226  INFO 26608 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.817s)
+2021-02-09 20:18:49.463  INFO 26608 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 5
+2021-02-09 20:18:49.612  INFO 26608 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2021-02-09 20:18:50.204  INFO 26608 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-09 20:18:50.307  INFO 26608 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-09 20:18:50.549  INFO 26608 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-09 20:18:50.715  INFO 26608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-09 20:18:52.268  INFO 26608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-09 20:18:52.299  INFO 26608 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-02-09 20:18:54.308  INFO 26608 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-09 20:18:54.324  INFO 26608 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 20:18:54.461 ERROR 26608 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'tokenProvider'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtTokenProvider' defined in file [C:\Users\Gabriel\Desktop\spring-restful\build\classes\kotlin\main\com\gga\restful\security\JwtTokenProvider.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.gga.restful.security.JwtTokenProvider]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/gga/restful/security/JwtTokenProvider$encodedSecretKey$2
+2021-02-09 20:18:54.496  INFO 26608 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-02-09 20:18:54.503  WARN 26608 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@15.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@15.0.2/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@15.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1661)
+ java.base@15.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@15.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@15.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1056)
+ java.base@15.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1116)
+ java.base@15.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+ java.base@15.0.2/java.lang.Thread.run(Thread.java:832)
+2021-02-09 20:18:54.504  WARN 26608 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@15.0.2/sun.nio.ch.SocketDispatcher.read0(Native Method)
+ java.base@15.0.2/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:46)
+ java.base@15.0.2/sun.nio.ch.NioSocketImpl.tryRead(NioSocketImpl.java:261)
+ java.base@15.0.2/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:312)
+ java.base@15.0.2/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+ java.base@15.0.2/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+ java.base@15.0.2/java.net.Socket$SocketInputStream.read(Socket.java:981)
+ java.base@15.0.2/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+ java.base@15.0.2/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+ java.base@15.0.2/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+ java.base@15.0.2/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1434)
+ java.base@15.0.2/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1038)
+ app//org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:161)
+ app//org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:128)
+ app//org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:113)
+ app//org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:73)
+ app//org.postgresql.core.PGStream.receiveChar(PGStream.java:441)
+ app//org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:598)
+ app//org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:161)
+ app//org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+ app//org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+ app//org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225)
+ app//org.postgresql.Driver.makeConnection(Driver.java:465)
+ app//org.postgresql.Driver.connect(Driver.java:264)
+ app//com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+ app//com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+ app//com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+ app//com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+ app//com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+ app//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:725)
+ app//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:711)
+ java.base@15.0.2/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+ java.base@15.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base@15.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+ java.base@15.0.2/java.lang.Thread.run(Thread.java:832)
+2021-02-09 20:18:54.508  WARN 26608 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-02-09 20:18:54.508  INFO 26608 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 20:18:54.514  INFO 26608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-09 20:18:55.048  INFO 26608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-02-09 20:18:55.071  INFO 26608 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-02-09 20:18:55.188 ERROR 26608 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:582) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.4.2.jar:2.4.2]
+	at com.gga.restful.RestfulApplicationKt.main(RestfulApplication.kt:13) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.4.2.jar:2.4.2]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:451) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:200) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159) ~[spring-boot-2.4.2.jar:2.4.2]
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'tokenProvider'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtTokenProvider' defined in file [C:\Users\Gabriel\Desktop\spring-restful\build\classes\kotlin\main\com\gga\restful\security\JwtTokenProvider.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.gga.restful.security.JwtTokenProvider]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/gga/restful/security/JwtTokenProvider$encodedSecretKey$2
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:175) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:170) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:155) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:259) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:233) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:434) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-2.4.2.jar:2.4.2]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtTokenProvider' defined in file [C:\Users\Gabriel\Desktop\spring-restful\build\classes\kotlin\main\com\gga\restful\security\JwtTokenProvider.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.gga.restful.security.JwtTokenProvider]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/gga/restful/security/JwtTokenProvider$encodedSecretKey$2
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:181) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1206) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.3.jar:5.3.3]
+	... 69 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.gga.restful.security.JwtTokenProvider]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/gga/restful/security/JwtTokenProvider$encodedSecretKey$2
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:225) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:311) ~[spring-beans-5.3.3.jar:5.3.3]
+	... 82 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/gga/restful/security/JwtTokenProvider$encodedSecretKey$2
+	at com.gga.restful.security.JwtTokenProvider.<init>(JwtTokenProvider.kt:21) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at kotlin.reflect.jvm.internal.calls.CallerImpl$Constructor.call(CallerImpl.kt:41) ~[kotlin-reflect-1.4.21.jar:1.4.21-release-351 (1.4.21)]
+	at kotlin.reflect.jvm.internal.KCallableImpl.call(KCallableImpl.kt:108) ~[kotlin-reflect-1.4.21.jar:1.4.21-release-351 (1.4.21)]
+	at kotlin.reflect.jvm.internal.KCallableImpl.callDefaultMethod$kotlin_reflection(KCallableImpl.kt:159) ~[kotlin-reflect-1.4.21.jar:1.4.21-release-351 (1.4.21)]
+	at kotlin.reflect.jvm.internal.KCallableImpl.callBy(KCallableImpl.kt:112) ~[kotlin-reflect-1.4.21.jar:1.4.21-release-351 (1.4.21)]
+	at org.springframework.beans.BeanUtils$KotlinDelegate.instantiateClass(BeanUtils.java:862) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-5.3.3.jar:5.3.3]
+	... 84 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.gga.restful.security.JwtTokenProvider$encodedSecretKey$2
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:606) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:168) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:468) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144) ~[spring-boot-devtools-2.4.2.jar:2.4.2]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[na:na]
+	... 96 common frames omitted
+
+2021-02-09 20:25:01.081  INFO 20496 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Starting RestfulApplicationKt using Java 15.0.2 on Gabriel-PC with PID 20496 (C:\Users\Gabriel\Desktop\spring-restful\build\classes\kotlin\main started by Gabriel in C:\Users\Gabriel\Desktop\spring-restful)
+2021-02-09 20:25:01.085  INFO 20496 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : No active profile set, falling back to default profiles: default
+2021-02-09 20:25:01.186  INFO 20496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-09 20:25:01.187  INFO 20496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-09 20:25:03.196  INFO 20496 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-09 20:25:03.346  INFO 20496 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 136 ms. Found 2 JPA repository interfaces.
+2021-02-09 20:25:04.352  INFO 20496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-09 20:25:04.372  INFO 20496 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-09 20:25:04.373  INFO 20496 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-09 20:25:04.582  INFO 20496 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-09 20:25:04.583  INFO 20496 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3394 ms
+2021-02-09 20:25:04.837  WARN 20496 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-09 20:25:05.003  INFO 20496 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-09 20:25:06.913  INFO 20496 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://ec2-54-225-190-241.compute-1.amazonaws.com/df9d5l7msrhdh6 (PostgreSQL 13.1)
+2021-02-09 20:25:08.676  INFO 20496 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.814s)
+2021-02-09 20:25:09.920  INFO 20496 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 5
+2021-02-09 20:25:10.075  INFO 20496 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2021-02-09 20:25:10.683  INFO 20496 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-09 20:25:10.750  INFO 20496 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-09 20:25:10.968  INFO 20496 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-09 20:25:11.133  INFO 20496 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-09 20:25:12.754  INFO 20496 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-09 20:25:12.770  INFO 20496 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-02-09 20:25:14.686  INFO 20496 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-09 20:25:14.702  INFO 20496 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 20:25:15.702  INFO 20496 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-02-09 20:25:15.703  INFO 20496 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
+2021-02-09 20:25:15.703  INFO 20496 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-02-09 20:25:15.704  INFO 20496 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
+2021-02-09 20:25:15.704  INFO 20496 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-02-09 20:25:15.704  INFO 20496 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-02-09 20:25:15.704  INFO 20496 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**'] with []
+2021-02-09 20:25:15.743  INFO 20496 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@171f749f, org.springframework.security.web.context.SecurityContextPersistenceFilter@56dc714f, org.springframework.security.web.header.HeaderWriterFilter@6be8a846, org.springframework.security.web.authentication.logout.LogoutFilter@710682f5, com.gga.restful.security.JwtTokenFilter@59ced94, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@677325c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a7d88dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c2621ff, org.springframework.security.web.session.SessionManagementFilter@7ea38b2f, org.springframework.security.web.access.ExceptionTranslationFilter@2eb40ef9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@14d76cb0]
+2021-02-09 20:25:15.927  INFO 20496 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-09 20:25:17.145  INFO 20496 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-09 20:25:17.229  INFO 20496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-09 20:25:17.252  INFO 20496 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Started RestfulApplicationKt in 17.036 seconds (JVM running for 18.69)
+2021-02-09 20:25:48.476  INFO 20496 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-09 20:25:48.478  INFO 20496 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-09 20:25:48.482  INFO 20496 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-02-09 20:25:51.435  INFO 20496 --- [http-nio-8080-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1824 ms
+2021-02-09 20:27:30.471  INFO 16540 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Starting RestfulApplicationKt using Java 15.0.2 on Gabriel-PC with PID 16540 (C:\Users\Gabriel\Desktop\spring-restful\build\classes\kotlin\main started by Gabriel in C:\Users\Gabriel\Desktop\spring-restful)
+2021-02-09 20:27:30.477  INFO 16540 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : No active profile set, falling back to default profiles: default
+2021-02-09 20:27:30.571  INFO 16540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-09 20:27:30.572  INFO 16540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-09 20:27:32.520  INFO 16540 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-09 20:27:32.656  INFO 16540 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 2 JPA repository interfaces.
+2021-02-09 20:27:33.643  INFO 16540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-09 20:27:33.657  INFO 16540 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-09 20:27:33.657  INFO 16540 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-09 20:27:33.849  INFO 16540 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-09 20:27:33.851  INFO 16540 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3278 ms
+2021-02-09 20:27:34.110  WARN 16540 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-09 20:27:34.290  INFO 16540 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-09 20:27:36.494  INFO 16540 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://ec2-54-225-190-241.compute-1.amazonaws.com/df9d5l7msrhdh6 (PostgreSQL 13.1)
+2021-02-09 20:27:38.270  INFO 16540 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.820s)
+2021-02-09 20:27:39.536  INFO 16540 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 5
+2021-02-09 20:27:39.691  INFO 16540 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2021-02-09 20:27:40.295  INFO 16540 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-09 20:27:40.361  INFO 16540 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-09 20:27:40.567  INFO 16540 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-09 20:27:40.739  INFO 16540 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-09 20:27:42.332  INFO 16540 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-09 20:27:42.352  INFO 16540 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-02-09 20:27:44.340  INFO 16540 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-09 20:27:44.356  INFO 16540 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 20:27:45.359  INFO 16540 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-02-09 20:27:45.360  INFO 16540 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
+2021-02-09 20:27:45.360  INFO 16540 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-02-09 20:27:45.361  INFO 16540 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
+2021-02-09 20:27:45.361  INFO 16540 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-02-09 20:27:45.361  INFO 16540 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-02-09 20:27:45.361  INFO 16540 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**'] with []
+2021-02-09 20:27:45.402  INFO 16540 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@175c9eff, org.springframework.security.web.context.SecurityContextPersistenceFilter@107fbb8d, org.springframework.security.web.header.HeaderWriterFilter@65c39b0e, org.springframework.security.web.authentication.logout.LogoutFilter@304963e8, com.gga.restful.security.JwtTokenFilter@56969dc6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5618c486, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65af7ea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43d88124, org.springframework.security.web.session.SessionManagementFilter@378f8239, org.springframework.security.web.access.ExceptionTranslationFilter@962ee91, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e80c231]
+2021-02-09 20:27:45.577  INFO 16540 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-09 20:27:46.800  INFO 16540 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-09 20:27:46.868  INFO 16540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-09 20:27:46.889  INFO 16540 --- [restartedMain] com.gga.restful.RestfulApplicationKt     : Started RestfulApplicationKt in 17.107 seconds (JVM running for 18.744)
+2021-02-09 20:28:07.755  INFO 16540 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-09 20:28:07.755  INFO 16540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-09 20:28:07.758  INFO 16540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-02-09 20:28:10.492  INFO 16540 --- [http-nio-8080-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1833 ms

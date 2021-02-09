@@ -1,9 +1,12 @@
 package com.gga.restful.controllers
 
+import com.gga.restful.errors.ApiErrors
 import com.gga.restful.models.dto.FileDTO
 import com.gga.restful.services.FileService
 import com.gga.restful.utils.FileUtil.Companion.linkToDownLoad
 import io.swagger.v3.oas.annotations.Operation
+import io.swagger.v3.oas.annotations.media.Content
+import io.swagger.v3.oas.annotations.media.Schema
 import io.swagger.v3.oas.annotations.responses.ApiResponse
 import io.swagger.v3.oas.annotations.security.SecurityRequirement
 import io.swagger.v3.oas.annotations.tags.Tag
@@ -45,7 +48,10 @@ class FileController {
         description = "Upload file",
         responses = [
             ApiResponse(description = "OK", responseCode = "200"),
-            ApiResponse(description = "Parameter 'file' empty", responseCode = "415")
+            ApiResponse(
+                description = "Parameter 'file' empty", responseCode = "415",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            )
         ],
         security = [SecurityRequirement(name = "Access token")]
     )
@@ -73,9 +79,18 @@ class FileController {
         description = "Upload files",
         responses = [
             ApiResponse(description = "File stored", responseCode = "200"),
-            ApiResponse(description = "Needs access token", responseCode = "403"),
-            ApiResponse(description = "Parameter 'files' empty", responseCode = "415"),
-            ApiResponse(description = "Fail to store file", responseCode = "500")
+            ApiResponse(
+                description = "Needs access token", responseCode = "403",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            ),
+            ApiResponse(
+                description = "Parameter 'files' empty", responseCode = "415",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            ),
+            ApiResponse(
+                description = "Fail to store file", responseCode = "500",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            )
         ],
         security = [SecurityRequirement(name = "Access token")]
     )
@@ -102,8 +117,14 @@ class FileController {
         description = "Download file",
         responses = [
             ApiResponse(description = "File found", responseCode = "200"),
-            ApiResponse(description = "Needs access token", responseCode = "403"),
-            ApiResponse(description = "File not found", responseCode = "404")
+            ApiResponse(
+                description = "Needs access token", responseCode = "403",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            ),
+            ApiResponse(
+                description = "File not found", responseCode = "404",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            )
         ],
         security = [SecurityRequirement(name = "Access token")]
     )

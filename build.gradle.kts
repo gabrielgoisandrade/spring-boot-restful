@@ -24,6 +24,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-security")
 
     /* OpenAPI */
+    implementation("org.springdoc:springdoc-openapi-kotlin:1.5.3")
     implementation("org.springdoc:springdoc-openapi-ui:1.5.3")
 
     /* Content negotiation */

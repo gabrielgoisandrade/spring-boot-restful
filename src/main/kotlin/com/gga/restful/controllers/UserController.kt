@@ -1,8 +1,11 @@
 package com.gga.restful.controllers
 
+import com.gga.restful.errors.ApiErrors
 import com.gga.restful.models.dto.UserDTO
 import com.gga.restful.services.UserService
 import io.swagger.v3.oas.annotations.Operation
+import io.swagger.v3.oas.annotations.media.Content
+import io.swagger.v3.oas.annotations.media.Schema
 import io.swagger.v3.oas.annotations.responses.ApiResponse
 import io.swagger.v3.oas.annotations.security.SecurityRequirement
 import io.swagger.v3.oas.annotations.tags.Tag
@@ -51,7 +54,11 @@ class UserController {
         description = "Get all recorded users with an optional pagination",
         responses = [
             ApiResponse(description = "Users found", responseCode = "200"),
-            ApiResponse(description = "Needs access token", responseCode = "403")
+            ApiResponse(
+                description = "Needs access token",
+                responseCode = "403",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            )
         ],
         security = [SecurityRequirement(name = "Access token")]
     )
@@ -76,8 +83,14 @@ class UserController {
         description = "Get recorded user by its ID",
         responses = [
             ApiResponse(description = "User found", responseCode = "200"),
-            ApiResponse(description = "User not found", responseCode = "404"),
-            ApiResponse(description = "Needs access token", responseCode = "403")
+            ApiResponse(
+                description = "User not found", responseCode = "404",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            ),
+            ApiResponse(
+                description = "Needs access token", responseCode = "403",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            )
         ],
         security = [SecurityRequirement(name = "Access token")]
     )
@@ -109,8 +122,14 @@ class UserController {
         description = "Update a existing user",
         responses = [
             ApiResponse(description = "User updated", responseCode = "200"),
-            ApiResponse(description = "Needs access token", responseCode = "403"),
-            ApiResponse(description = "User not found", responseCode = "404"),
+            ApiResponse(
+                description = "Needs access token", responseCode = "403",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            ),
+            ApiResponse(
+                description = "User not found", responseCode = "404",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            ),
         ],
         requestBody = Body(description = "User's body"),
         security = [SecurityRequirement(name = "Access token")]
@@ -131,8 +150,14 @@ class UserController {
         description = "Delete a existing user by its ID",
         responses = [
             ApiResponse(description = "User deleted", responseCode = "204"),
-            ApiResponse(description = "Needs access token", responseCode = "403"),
-            ApiResponse(description = "User not found", responseCode = "404")
+            ApiResponse(
+                description = "Needs access token", responseCode = "403",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            ),
+            ApiResponse(
+                description = "User not found", responseCode = "404",
+                content = [Content(schema = Schema(implementation = ApiErrors::class))]
+            )
         ],
         security = [SecurityRequirement(name = "Access token")]
     )
