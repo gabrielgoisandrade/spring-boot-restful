@@ -38,7 +38,7 @@ spring:
   # Flyway config
   flyway:
     url: jdbc:postgresql://ec2-54-225-190-241.compute-1.amazonaws.com/df9d5l7msrhdh6
-    schemas: docker_spring_restful_schema
+    schemas: public
     user: bbsqfwsgtnjtaz
     password: bc9f8992c51b895ba686ea1e35de4fc6e5b244826638df008d032cb70fd6ec77
     locations: classpath:db/migration
